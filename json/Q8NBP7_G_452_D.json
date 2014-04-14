@@ -1,0 +1,35 @@
+{"SAAPS":
+   { "uniprotac": "Q8NBP7",
+     "resnum": 452,
+     "native": "G",
+     "mutant": "D",
+     "pdbs"  : [
+{"SAAP":
+   { "file": "/acrm/data/pdb/pdb2pmw.ent",
+     "pdbcode": "2pmw",
+     "residue": "B452",
+     "mutation": "D",
+     "structuretype": "crystal",
+     "resolution": "2.30A",
+     "rfactor": "19.60%",
+     "results": {
+         "Binding": {"Binding-BOOL": "OK"},
+         "BuriedCharge": {"BuriedCharge-NATIVE-CHARGE": "0", "BuriedCharge-MUTANT-CHARGE": "-1", "BuriedCharge-BOOL": "OK", "BuriedCharge-RELACCESS": "151.677"},
+         "CisPro": {"CisPro-BOOL": "OK", "CisPro-NATIVE": "GLY", "CisPro-OMEGA": "-8.913"},
+         "Clash": {"Clash-ENERGY": "-4.20", "Clash-BOOL": "OK"},
+         "CorePhilic": {"CorePhilic-MUTANT-HPHOB": "-0.72", "CorePhilic-BOOL": "OK", "CorePhilic-RELACCESS": "151.677", "CorePhilic-NATIVE-HPHOB": "0.16"},
+         "Glycine": {"Glycine-MUTANT-THRESHOLD": "1.5", "Glycine-BOOL": "OK", "Glycine-NATIVE-THRESHOLD": "0.35", "Glycine-NATIVE-ENERGY": "0.3812", "Glycine-PSI": "164.059", "Glycine-MUTANT-ENERGY": "1.8769", "Glycine-PHI": "2.064", "Glycine-NATIVE-BOOL": "BAD", "Glycine-MUTANT": "ASP", "Glycine-NATIVE": "GLY"},
+         "HBonds": {"HBonds-ENERGY": "NULL", "HBonds-BOOL": "OK", "HBonds-ZVAL": "NULL", "HBonds-ATOM": "NULL", "HBonds-PARTNER-RES": "NULL", "HBonds-PARTNER-ATOM": "NULL"},
+         "Impact": {"Impact-BOOL": "OK", "Impact-NSEQ": "16", "Impact-THRESHOLD": "0.97", "Impact-CONSSCORE": "0.680805788917938"},
+         "Interface": {"Interface-BOOL": "OK", "Interface-RELACCESS": "151.677", "Interface-RELACCESS-MOL": "151.677"},
+         "Proline": {"Proline-MUTANT-THRESHOLD": "0.53", "Proline-BOOL": "OK", "Proline-NATIVE-THRESHOLD": "", "Proline-NATIVE-ENERGY": "", "Proline-PSI": "164.059", "Proline-MUTANT-ENERGY": "", "Proline-PHI": "2.064", "Proline-NATIVE-BOOL": "OK", "Proline-MUTANT": "ASP", "Proline-NATIVE": "GLY"},
+         "SProtFT": {"SProtFT-BOOL": "OK", "SProtFT-FEATURES": "0000000000000", "SProtFT-NAMES": ""},
+         "SSGeom": {"SSGeom-BOOL": "OK"},
+         "SurfacePhobic": {"SurfacePhobic-MUTANT-HPHOB": "-0.72", "SurfacePhobic-BOOL": "OK", "SurfacePhobic-RELACCESS": "151.677", "SurfacePhobic-NATIVE-HPHOB": "0.16"},
+         "Voids": {"Voids-MUTANT": [428.559,187.728,153.584,141.277,135.516,130.621,123.630,120.308,112.664,96.808], "Voids-MUTANT-LARGEST": "428.559000", "Voids-BOOL": "OK", "Voids-NATIVE": [428.559,187.728,153.584,141.277,135.516,130.621,123.630,120.308,112.664,96.808], "Voids-NATIVE-LARGEST": "428.559000"}
+      }
+   }
+}
+      ]
+   }
+}
