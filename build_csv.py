@@ -119,7 +119,9 @@ def main_equal_splits():
 def main_one_test_per_mutation():
     mutations = []
 
-    with open("labels.txt") as f, open("labels_ok.txt", "w") as l, open("errors.log", "w") as err:
+    with open("labels.txt") as f, \
+            open("labels_ok.txt", "w") as l, \
+            open("errors.log", "w") as err:
         for line in f:
             line = line.strip()
             position, aminoacid_from, aminoacid_to, label = line.split(",")
