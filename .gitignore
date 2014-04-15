@@ -38,8 +38,11 @@ nosetests.xml
 # PyCharm
 .idea/
 
-# Personal
-datasets/
-
 # Weka dataset files
 *.arff
+
+# Output
+datasets/
+errors.log
+labels_ok.txt
+

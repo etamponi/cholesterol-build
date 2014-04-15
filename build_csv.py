@@ -70,7 +70,7 @@ def greedy_split(elements, k):
     return splits
 
 
-def main():
+def main_equal_splits():
     mutations = {"GOF": [], "LOF": []}
 
     with open("labels.txt") as f, open("errors.log", "w") as err:
@@ -116,5 +116,37 @@ def main():
                         complete.write(fake_line + "\n")
 
 
+def main_one_test_per_mutation():
+    mutations = []
+
+    with open("labels.txt") as f, open("labels_ok.txt", "w") as l, open("errors.log", "w") as err:
+        for line in f:
+            line = line.strip()
+            position, aminoacid_from, aminoacid_to, label = line.split(",")
+            json_file_name = "json/{}_{}_{}_{}.json".format(
+                PREFIX, aminoacid_from, position, aminoacid_to
+            )
+            try:
+                output = check_output([COMMAND, json_file_name, label],
+                                      stderr=subprocess.STDOUT)
+                output = output.split("\n")[:-1]  # Last one is empty
+                if len(output) > LIMIT:
+                    output = output[:LIMIT]
+                mutations.append(output)
+                l.write(line + "\n")
+            except CalledProcessError as e:
+                message = "{} {}: {}".format(label, json_file_name, e.output)
+                err.write(message)
+                print message,
+
+    fake_line = "0," * mutations[0][0].count(",") + "---"
+    with open("datasets/{}_split.csv".format(DATASET_NAME), "w") as complete:
+        complete.write(HEADER + "\n")
+        for mutation in mutations:
+            for line in mutation:
+                complete.write(line + "\n")
+            complete.write(fake_line + "\n")
+
+
 if __name__ == "__main__":
-    main()
+    main_one_test_per_mutation()
